@@ -1,0 +1,16 @@
+# Gemini IDE & Agent configurations
+.gemini/
+.agents/
+
+# IDE configurations
+.vscode/
+.idea/
+
+# OS temporary files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Temporary uploads (opcional - descomente se não quiser subir as imagens de teste da galeria)
+# uploads/*

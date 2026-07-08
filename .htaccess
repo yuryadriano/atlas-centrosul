@@ -1,0 +1,18 @@
+# ─────────────────────────────────────────────────────────────
+# Atlas Centro Sul — Configurações do Servidor Apache (.htaccess)
+# ─────────────────────────────────────────────────────────────
+
+# Activar reescrita de URLs
+RewriteEngine On
+
+# Impedir listagem pública de ficheiros (Directory Browsing)
+Options -Indexes
+
+# Bloquear acesso directo via browser a pastas confidenciais (App, Partials e Database)
+# Compatível localmente (/atlas/) e em produção (raiz do domínio)
+RedirectMatch 403 ^/(atlas/)?(app|partials|database)(/.*)?$
+
+# URLs Amigáveis: Permite carregar ficheiros ocultando a extensão .php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^\.]+)/?$ $1.php [NC,L]
