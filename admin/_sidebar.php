@@ -58,23 +58,37 @@ $paginaActual = basename($_SERVER['PHP_SELF']);
 <!-- Botão flutuante para abrir o menu em mobile -->
 <button class="admin-menu-toggle" id="adminMenuToggleBtn" aria-label="Abrir Menu">☰</button>
 
+<!-- Backdrop overlay para escurecer o fundo em mobile -->
+<div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const sidebar = document.getElementById('sidebar');
     const openBtn = document.getElementById('adminMenuToggleBtn');
     const closeBtn = document.getElementById('sidebarCloseBtn');
+    const backdrop = document.getElementById('sidebarBackdrop');
 
-    if (openBtn && sidebar) {
+    if (openBtn && sidebar && backdrop) {
         openBtn.addEventListener('click', function(e) {
             e.stopPropagation();
             sidebar.classList.add('open');
+            backdrop.classList.add('active');
         });
     }
 
-    if (closeBtn && sidebar) {
+    if (closeBtn && sidebar && backdrop) {
         closeBtn.addEventListener('click', function(e) {
             e.stopPropagation();
             sidebar.classList.remove('open');
+            backdrop.classList.remove('active');
+        });
+    }
+
+    // Fechar ao clicar no backdrop (fundo escuro)
+    if (backdrop && sidebar) {
+        backdrop.addEventListener('click', function() {
+            sidebar.classList.remove('open');
+            backdrop.classList.remove('active');
         });
     }
 
@@ -83,6 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (sidebar && sidebar.classList.contains('open')) {
             if (!sidebar.contains(e.target) && e.target !== openBtn) {
                 sidebar.classList.remove('open');
+                if (backdrop) backdrop.classList.remove('active');
             }
         }
     });
