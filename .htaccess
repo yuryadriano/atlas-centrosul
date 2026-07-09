@@ -2,8 +2,11 @@
 # Atlas Centro Sul — Configurações do Servidor Apache (.htaccess)
 # ─────────────────────────────────────────────────────────────
 
-# Activar reescrita de URLs
 RewriteEngine On
+
+# Compatibilidade para produção no Coolify: reescrever /atlas/... para /... se a pasta /atlas não existir no root do servidor
+RewriteCond %{DOCUMENT_ROOT}/atlas !-d
+RewriteRule ^atlas/?(.*)$ /$1 [QSA,L]
 
 # Impedir listagem pública de ficheiros (Directory Browsing)
 Options -Indexes
