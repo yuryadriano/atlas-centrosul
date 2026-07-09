@@ -1013,7 +1013,10 @@ textarea.form-control { resize: vertical; min-height: 140px; }
 @media (max-width: 768px) {
     :root { --nav-h: 72px; }
     .container { padding: 0 20px; }
-    .section { padding: 64px 0; }
+    .section { padding: 50px 0; }
+
+    /* Ajustar logo ao tamanho do navbar mobile */
+    .nav-logo img { height: 48px; }
 
     .nav-links {
         position: fixed;
@@ -1043,10 +1046,32 @@ textarea.form-control { resize: vertical; min-height: 140px; }
     }
     .nav-toggle { display: flex; }
 
-    .hero-video-content h1 { font-size: clamp(2.4rem, 8vw, 3.2rem); }
+    /* Reduzir títulos e elementos do hero */
+    .hero-video-content h1 { font-size: clamp(1.8rem, 7vw, 2.8rem); margin-bottom: 16px; }
+    .hero-video-content p { font-size: 15px; margin-bottom: 24px; }
+    .hero-video-content { padding: 0 20px 48px; }
+
+    /* Reduzir títulos globais */
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.4rem; }
+    p  { font-size: 15px; line-height: 1.7; }
+
+    /* Reduzir secção Split (Sobre) */
+    .split-content { padding: 36px 20px; }
+    .split-visual { height: 240px; }
+    .split-visual-logo img { width: 180px; }
+
+    /* Estatísticas e Pilares */
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
-    .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,.1); padding: 16px 8px; }
+    .stat-num { font-size: 2.2rem; }
+    .stat-label { font-size: 11px; }
+
     .pilares-grid { grid-template-columns: 1fr; }
+    .pilar-card { padding: 32px 20px; }
+    .feature-card { padding: 30px 20px; }
+
     .news-grid { grid-template-columns: 1fr; }
     .gallery-grid { grid-template-columns: repeat(2, 1fr); }
     .form-row { grid-template-columns: 1fr; }
@@ -1054,13 +1079,15 @@ textarea.form-control { resize: vertical; min-height: 140px; }
     .footer-grid { grid-template-columns: 1fr; }
     .about-badge-float { right: 0; bottom: -12px; }
     .card-grid-2, .card-grid-3 { grid-template-columns: 1fr; }
-    .split-content { padding: 48px 24px; }
-    .hero-video-content { padding: 0 20px 60px; }
 }
 
 @media (max-width: 480px) {
     .news-grid { grid-template-columns: 1fr; }
     .gallery-grid { grid-template-columns: 1fr; }
+    /* Reduzir colunas de estatísticas em telemóveis pequenos */
+    .stats-grid { grid-template-columns: 1fr; }
+    .stat-item { border-bottom: 1px solid rgba(255,255,255,.1); }
+    .stat-item:last-child { border-bottom: none; }
 }
 
 /* =========================================================
