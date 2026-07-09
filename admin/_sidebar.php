@@ -14,6 +14,7 @@ $paginaActual = basename($_SERVER['PHP_SELF']);
             <strong>Atlas Centro Sul</strong>
             <span>Painel Admin</span>
         </div>
+        <button class="sidebar-close" id="sidebarCloseBtn" aria-label="Fechar Menu">✕</button>
     </div>
 
     <nav class="sidebar-nav">
@@ -53,3 +54,37 @@ $paginaActual = basename($_SERVER['PHP_SELF']);
         </a>
     </div>
 </aside>
+
+<!-- Botão flutuante para abrir o menu em mobile -->
+<button class="admin-menu-toggle" id="adminMenuToggleBtn" aria-label="Abrir Menu">☰</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const sidebar = document.getElementById('sidebar');
+    const openBtn = document.getElementById('adminMenuToggleBtn');
+    const closeBtn = document.getElementById('sidebarCloseBtn');
+
+    if (openBtn && sidebar) {
+        openBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            sidebar.classList.add('open');
+        });
+    }
+
+    if (closeBtn && sidebar) {
+        closeBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            sidebar.classList.remove('open');
+        });
+    }
+
+    // Fechar ao clicar fora do sidebar em mobile
+    document.addEventListener('click', function(e) {
+        if (sidebar && sidebar.classList.contains('open')) {
+            if (!sidebar.contains(e.target) && e.target !== openBtn) {
+                sidebar.classList.remove('open');
+            }
+        }
+    });
+});
+</script>
