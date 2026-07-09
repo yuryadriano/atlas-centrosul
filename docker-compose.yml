@@ -1,0 +1,60 @@
+version: '3.9'
+services:
+  # ─────────────────────────────────────────────────────────────────
+  # PHP APPLICATION SERVICE (Apache + PHP)
+  # NOTE: Code volumes are intentionally NOT mounted here.
+  # The code is built into the image by the Dockerfile.
+  # This prevents Coolify build caching and sync issues.
+  # ─────────────────────────────────────────────────────────────────
+  app-php:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      DB_HOST: mysql
+      DB_NAME: ${DB_NAME:-atlas_centrosul}
+      DB_USER: ${DB_USER:-root}
+      DB_PASS: ${DB_PASS:-test123}
+      DB_PASSWORD: ${DB_PASS:-test123}
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  # ─────────────────────────────────────────────────────────────────
+  # MYSQL DATABASE SERVICE
+  # ─────────────────────────────────────────────────────────────────
+  mysql:
+    image: mysql:8
+    restart: always
+    environment:
+      MYSQL_DATABASE: ${DB_NAME:-atlas_centrosul}
+      MYSQL_ROOT_PASSWORD: ${DB_PASS:-test123}
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-p${DB_PASS:-test123}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+
+  # ─────────────────────────────────────────────────────────────────
+  # PHPMYADMIN SERVICE (Database Management)
+  # Access: E.g., configured via PMA_ABSOLUTE_URI in Coolify
+  # ─────────────────────────────────────────────────────────────────
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    restart: always
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: ${DB_USER:-root}
+      PMA_PASSWORD: ${DB_PASS:-test123}
+      PMA_ABSOLUTE_URI: ${PMA_ABSOLUTE_URI:-}
+      UPLOAD_LIMIT: 300M
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+volumes:
+  mysql-data:
