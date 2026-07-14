@@ -60,6 +60,9 @@ $slogan2 = trim($partes[1] ?? 'Múltiplas Soluções.');
     </div>
     <div class="hero-video-overlay"></div>
     <div class="hero-video-content fade-up">
+        <div style="font-size:12px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;">
+            Huambo · Angola
+        </div>
         <h1>
             <?= htmlspecialchars($slogan1) ?><?php if ($slogan2): ?>,<br><span><?= htmlspecialchars($slogan2) ?></span><?php endif; ?>
         </h1>
