@@ -28,9 +28,9 @@ $navSolid  = true;
                 <p style="color:var(--gray-500);margin-bottom:20px;line-height:1.8;">
                     O nome <em>"Atlas"</em> simboliza força e o suporte de múltiplas realidades — tal como a empresa sustenta e desenvolve negócios em setores distintos mas complementares. A nossa sede no Município de Huambo posiciona-nos estrategicamente no coração do país.
                 </p>
-                <p style="color:var(--gray-700);line-height:1.8;">
-                    <?= htmlspecialchars(config('sobre_resumo')) ?>
-                </p>
+                <div style="color:var(--gray-700);line-height:1.8;white-space:pre-line;">
+                    <?= htmlspecialchars(config('sobre_texto', config('sobre_resumo'))) ?>
+                </div>
             </div>
             <div style="position:relative;">
                 <div style="background:linear-gradient(135deg,var(--navy),var(--navy-mid));border-radius:var(--radius-lg);height:400px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-md);overflow:hidden;">
@@ -56,17 +56,17 @@ $navSolid  = true;
             <div class="feature-card" style="text-align:center;">
                 <div class="feature-icon">🎯</div>
                 <h3>Missão</h3>
-                <p>Criar valor sustentável para Angola através de soluções multissectoriais inovadoras, com rigor técnico e compromisso com as comunidades onde atuamos.</p>
+                <p><?= htmlspecialchars(config('sobre_missao', 'Criar valor sustentável para Angola através de soluções multissectoriais inovadoras, com rigor técnico e compromisso com as comunidades onde atuamos.')) ?></p>
             </div>
             <div class="feature-card" style="text-align:center;">
                 <div class="feature-icon">👁️</div>
                 <h3>Visão</h3>
-                <p>Ser a empresa de referência no centro-sul de Angola, reconhecida pela excelência operacional, diversidade de serviços e impacto positivo no desenvolvimento nacional.</p>
+                <p><?= htmlspecialchars(config('sobre_visao', 'Ser a empresa de referência no centro-sul de Angola, reconhecida pela excelência operacional, diversidade de serviços e impacto positivo no desenvolvimento nacional.')) ?></p>
             </div>
             <div class="feature-card" style="text-align:center;">
                 <div class="feature-icon">⚖️</div>
                 <h3>Valores</h3>
-                <p>Integridade, inovação, responsabilidade social, respeito pelos parceiros e colaboradores, e dedicação à qualidade em tudo o que fazemos.</p>
+                <p><?= htmlspecialchars(config('sobre_valores', 'Integridade, inovação, responsabilidade social, respeito pelos parceiros e colaboradores, e dedicação à qualidade em tudo o que fazemos.')) ?></p>
             </div>
         </div>
     </div>
@@ -124,17 +124,26 @@ $navSolid  = true;
             <p class="section-lead white" style="margin:0 auto;text-align:center;">Designados nos termos dos estatutos da empresa, os gerentes fundadores lideram a Atlas Centro Sul com determinação e visão estratégica.</p>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:800px;margin:0 auto;">
+            <?php 
+            $g1_nome = config('gerente_1_nome', 'Quintino Lino Machado Adriano');
+            $g1_inicial = mb_strtoupper(mb_substr($g1_nome ?: 'Q', 0, 1));
+            ?>
             <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-lg);padding:40px;text-align:center;transition:var(--transition);" onmouseover="this.style.background='rgba(255,255,255,.05)'" onmouseout="this.style.background='rgba(255,255,255,.03)'">
-                <div style="width:80px;height:80px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:900;color:var(--navy-dark);margin:0 auto 20px;">Q</div>
-                <h3 style="color:#fff;font-size:18px;margin-bottom:6px;">Quintino Lino Machado Adriano</h3>
-                <p style="color:var(--gold);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px;">Gerente</p>
-                <p style="color:rgba(255,255,255,.6);font-size:14px;line-height:1.7;">Natural de Huambo, co-fundador e gerente da Atlas Centro Sul, detém a quota maioritária da empresa.</p>
+                <div style="width:80px;height:80px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:900;color:var(--navy-dark);margin:0 auto 20px;"><?= htmlspecialchars($g1_inicial) ?></div>
+                <h3 style="color:#fff;font-size:18px;margin-bottom:6px;"><?= htmlspecialchars($g1_nome) ?></h3>
+                <p style="color:var(--gold);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px;"><?= htmlspecialchars(config('gerente_1_cargo', 'Gerente')) ?></p>
+                <p style="color:rgba(255,255,255,.6);font-size:14px;line-height:1.7;"><?= htmlspecialchars(config('gerente_1_bio', 'Natural de Huambo, co-fundador e gerente da Atlas Centro Sul, detém a quota maioritária da empresa.')) ?></p>
             </div>
+            
+            <?php 
+            $g2_nome = config('gerente_2_nome', 'António Francisco Bumba');
+            $g2_inicial = mb_strtoupper(mb_substr($g2_nome ?: 'A', 0, 1));
+            ?>
             <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-lg);padding:40px;text-align:center;transition:var(--transition);" onmouseover="this.style.background='rgba(255,255,255,.05)'" onmouseout="this.style.background='rgba(255,255,255,.03)'">
-                <div style="width:80px;height:80px;background:linear-gradient(135deg,var(--steel-dark),var(--steel));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:900;color:#fff;margin:0 auto 20px;">A</div>
-                <h3 style="color:#fff;font-size:18px;margin-bottom:6px;">António Francisco Bumba</h3>
-                <p style="color:var(--gold);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px;">Gerente</p>
-                <p style="color:rgba(255,255,255,.6);font-size:14px;line-height:1.7;">Natural de Huambo, Bairro São João, co-fundador e gerente da Atlas Centro Sul.</p>
+                <div style="width:80px;height:80px;background:linear-gradient(135deg,var(--steel-dark),var(--steel));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:900;color:#fff;margin:0 auto 20px;"><?= htmlspecialchars($g2_inicial) ?></div>
+                <h3 style="color:#fff;font-size:18px;margin-bottom:6px;"><?= htmlspecialchars($g2_nome) ?></h3>
+                <p style="color:var(--gold);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px;"><?= htmlspecialchars(config('gerente_2_cargo', 'Gerente')) ?></p>
+                <p style="color:rgba(255,255,255,.6);font-size:14px;line-height:1.7;"><?= htmlspecialchars(config('gerente_2_bio', 'Natural de Huambo, Bairro São João, co-fundador e gerente da Atlas Centro Sul.')) ?></p>
             </div>
         </div>
         <div style="margin-top:56px;text-align:center;">

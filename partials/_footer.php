@@ -24,7 +24,7 @@ require_once __DIR__ . '/../app/auth.php';
             <!-- Marca -->
             <div class="footer-brand">
                 <img src="/atlas/assets/img/logo.png" alt="Atlas Centro Sul">
-                <p><?= htmlspecialchars(config('sobre_resumo', 'A Atlas Centro Sul é uma empresa angolana multissectorial dedicada a criar valor em múltiplos sectores da economia nacional.')) ?></p>
+                <p><?= htmlspecialchars(truncar(config('sobre_resumo', 'A Atlas Centro Sul é uma empresa angolana multissectorial dedicada a criar valor em múltiplos sectores da economia nacional.'), 140)) ?></p>
                 <div class="footer-socials">
                     <?php if (config('facebook')): ?>
                     <a href="<?= htmlspecialchars(config('facebook')) ?>" target="_blank" class="social-btn" title="Facebook">f</a>

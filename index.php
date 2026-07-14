@@ -63,7 +63,7 @@ $slogan2 = trim($partes[1] ?? 'Múltiplas Soluções.');
         <h1>
             <?= htmlspecialchars($slogan1) ?><?php if ($slogan2): ?>,<br><span><?= htmlspecialchars($slogan2) ?></span><?php endif; ?>
         </h1>
-        <p>A Atlas Centro Sul atua nos setores de energia, saúde, agronegócio e comércio — criando valor sustentável para Angola.</p>
+        <p><?= htmlspecialchars(config('hero_subtitulo', 'A Atlas Centro Sul atua nos setores de energia, saúde, agronegócio e comércio — criando valor sustentável para Angola.')) ?></p>
         <div style="display:flex;gap:16px;flex-wrap:wrap;">
             <a href="/atlas/sobre.php" class="btn btn-white">Conhecer a Atlas</a>
             <a href="/atlas/contacto.php" class="btn btn-outline-white">Contacto</a>
@@ -82,7 +82,7 @@ $slogan2 = trim($partes[1] ?? 'Múltiplas Soluções.');
         <h1>
             <?= htmlspecialchars($slogan1) ?><?php if ($slogan2): ?>,<br><span style="color:var(--gold);"><?= htmlspecialchars($slogan2) ?></span><?php endif; ?>
         </h1>
-        <p>A Atlas Centro Sul atua nos setores de energia & indústria, saúde & bem-estar, agronegócio e comércio — criando valor sustentável para Angola.</p>
+        <p><?= htmlspecialchars(config('hero_subtitulo', 'A Atlas Centro Sul atua nos setores de energia & indústria, saúde & bem-estar, agronegócio e comércio — criando valor sustentável para Angola.')) ?></p>
         <div style="display:flex;gap:16px;flex-wrap:wrap;">
             <a href="/atlas/sobre.php" class="btn btn-white" style="border-radius:var(--radius);">Conhecer a Atlas</a>
             <a href="/atlas/contacto.php" class="btn btn-outline-white" style="border-radius:var(--radius);">Contacto</a>
@@ -238,13 +238,13 @@ $slogan2 = trim($partes[1] ?? 'Múltiplas Soluções.');
     <div style="position:absolute;inset:0;opacity:.04;background-image:repeating-linear-gradient(0deg,transparent,transparent 60px,rgba(255,255,255,1) 60px,rgba(255,255,255,1) 61px),repeating-linear-gradient(90deg,transparent,transparent 60px,rgba(255,255,255,1) 60px,rgba(255,255,255,1) 61px);"></div>
     <div class="container" style="position:relative;z-index:1;">
         <p style="font-size:12px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;">
-            A Nossa Cultura
+            <?= htmlspecialchars(config('manifesto_subtitulo', 'A Nossa Cultura')) ?>
         </p>
         <h2 style="font-size:clamp(3rem,7vw,7rem);font-weight:900;color:var(--white);letter-spacing:-.04em;line-height:.95;">
-            Fazemos<br>Acontecer!
+            <?= nl2br(htmlspecialchars(config('manifesto_titulo', "Fazemos\nAcontecer!"))) ?>
         </h2>
         <p style="color:rgba(255,255,255,.5);font-size:16px;margin-top:32px;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.8;">
-            Assumimos um papel activo na construção de uma Angola mais sustentável, mais próxima e com mais serviços.
+            <?= htmlspecialchars(config('manifesto_texto', 'Assumimos um papel activo na construção de uma Angola mais sustentável, mais próxima e com mais serviços.')) ?>
         </p>
     </div>
 </section>
