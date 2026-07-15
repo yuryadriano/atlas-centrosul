@@ -168,6 +168,126 @@ $novasConfigs = [
     'home_pilar4_desc' => [
         'valor' => 'Comércio geral de bens e serviços e gestão de participações sociais em empresas parceiras do ecossistema Atlas.',
         'label' => 'Homepage - Pilar 4 - Descrição'
+    ],
+    'sobre_objeto_social' => [
+        'valor' => '[{"icone":"⚙️","titulo":"Serviços Industriais","desc":"Prestação de serviços industriais incluindo soldadura, pintura, manutenção eletromecânica e eletrónica. Suporte técnico especializado para unidades industriais."},{"icone":"🛢️","titulo":"Sector Petrolífero","desc":"Atuação no setor petrolífero, onshore e offshore, incluindo manutenção, logística e serviços de apoio técnico a operadoras e contratantes."},{"icone":"🏥","titulo":"Saúde","desc":"Criação e exploração de projetos no ramo da saúde: clínicas, hospitais, fisioterapia, laboratórios e fornecimento de equipamentos médicos e hospitalares."},{"icone":"🌾","titulo":"Agronegócio","desc":"Agronomia e agronegócio, incluindo produção, transformação e comercialização de produtos agrícolas — contribuindo para a segurança alimentar nacional."},{"icone":"🛒","titulo":"Comércio Geral","desc":"Comércio geral de bens e serviços, respondendo às diversas necessidades do mercado angolano com qualidade e competitividade."},{"icone":"🏢","titulo":"Holding & Investimentos","desc":"Gestão de participações sociais noutras sociedades (holding), contribuindo para o desenvolvimento do ecossistema empresarial angolano."}]',
+        'label' => 'Sobre Nós - Objeto Social'
+    ],
+    // ENERGIA & INDÚSTRIA
+    'servico_energia_industria_titulo' => [
+        'valor' => 'Energia & Indústria',
+        'label' => 'Serviço - Energia - Título'
+    ],
+    'servico_energia_industria_icone' => [
+        'valor' => '⚙️',
+        'label' => 'Serviço - Energia - Ícone'
+    ],
+    'servico_energia_industria_desc' => [
+        'valor' => 'Serviços industriais especializados e suporte técnico ao sector petrolífero, onshore e offshore, em Angola.',
+        'label' => 'Serviço - Energia - Descrição'
+    ],
+    'servico_energia_industria_intro' => [
+        'valor' => 'Com equipas técnicas qualificadas, a Atlas oferece soluções industriais completas para os mais exigentes setores da economia angolana.',
+        'label' => 'Serviço - Energia - Introdução'
+    ],
+    'servico_energia_industria_gradiente' => [
+        'valor' => 'linear-gradient(135deg,#1a0a00,#3d1a00)',
+        'label' => 'Serviço - Energia - Gradiente CSS'
+    ],
+    'servico_energia_industria_servicos' => [
+        'valor' => '[{"icone":"🔧","titulo":"Manutenção Eletromecânica","desc":"Manutenção preventiva e corretiva de equipamentos eletromecânicos industriais, garantindo continuidade operacional."},{"icone":"🔩","titulo":"Soldadura Industrial","desc":"Serviços de soldadura MIG, TIG e elétrica para estruturas metálicas, tubagens e equipamentos industriais."},{"icone":"🎨","titulo":"Pintura Industrial","desc":"Tratamento anticorrosivo e pintura de estruturas metálicas, equipamentos e instalações industriais."},{"icone":"⚡","titulo":"Manutenção Eletrónica","desc":"Diagnóstico, reparação e manutenção de sistemas eletrónicos e automatismos industriais."},{"icone":"🛢️","titulo":"Apoio ao Sector Petrolífero","desc":"Logística, manutenção e serviços de apoio técnico a operações onshore e offshore."},{"icone":"🚢","titulo":"Serviços Offshore","desc":"Suporte técnico especializado para plataformas e operações offshore no mar angolano."},{"icone":"🏗️","titulo":"Engenharia de Construção Civil","desc":"Planeamento, projeto e execução de obras civis, infraestruturas e edifícios comerciais ou industriais."},{"icone":"📐","titulo":"Arquitetura","desc":"Desenvolvimento de projetos arquitetónicos inovadores, planeamento urbano e design de interiores/exteriores."},{"icone":"💧","titulo":"Engenharia Hidráulica","desc":"Projetos e soluções para sistemas de abastecimento de água, saneamento, drenagem e gestão de recursos hídricos."},{"icone":"💻","titulo":"Engenharia Informática","desc":"Desenvolvimento de software, gestão de infraestruturas de rede, segurança da informação e suporte tecnológico."}]',
+        'label' => 'Serviço - Energia - Lista de Serviços'
+    ],
+    'servico_energia_industria_vantagens' => [
+        'valor' => '[{"icone":"✅","titulo":"Equipas Qualificadas","desc":"Técnicos com formação especializada e experiência comprovada no setor industrial."},{"icone":"⏱️","titulo":"Resposta Rápida","desc":"Disponibilidade para intervenções urgentes e contratos de manutenção contínua."},{"icone":"🔒","titulo":"Segurança em Primeiro Lugar","desc":"Cumprimento rigoroso de normas de segurança industrial e ocupacional."},{"icone":"📋","titulo":"Relatórios Detalhados","desc":"Documentação completa de cada intervenção para rastreabilidade e conformidade."}]',
+        'label' => 'Serviço - Energia - Lista de Vantagens'
+    ],
+    // SAÚDE & BEM-ESTAR
+    'servico_saude_bem_estar_titulo' => [
+        'valor' => 'Saúde & Bem-Estar',
+        'label' => 'Serviço - Saúde - Título'
+    ],
+    'servico_saude_bem_estar_icone' => [
+        'valor' => '🏥',
+        'label' => 'Serviço - Saúde - Ícone'
+    ],
+    'servico_saude_bem_estar_desc' => [
+        'valor' => 'Criação e gestão de infraestruturas de saúde e fornecimento de equipamentos médicos de alta qualidade para Angola.',
+        'label' => 'Serviço - Saúde - Descrição'
+    ],
+    'servico_saude_bem_estar_intro' => [
+        'valor' => 'A Atlas Centro Sul investe no bem-estar das populações através de projetos de saúde que combinam infraestrutura, tecnologia e capital humano qualificado.',
+        'label' => 'Serviço - Saúde - Introdução'
+    ],
+    'servico_saude_bem_estar_gradiente' => [
+        'valor' => 'linear-gradient(135deg,#001a1a,#00404d)',
+        'label' => 'Serviço - Saúde - Gradiente CSS'
+    ],
+    'servico_saude_bem_estar_servicos' => [
+        'valor' => '[{"icone":"🏨","titulo":"Clínicas e Centros de Saúde","desc":"Criação e exploração de clínicas e centros de saúde privados, com serviços de medicina geral e especialidades."},{"icone":"🦴","titulo":"Fisioterapia e Reabilitação","desc":"Centros de fisioterapia com equipamentos modernos para reabilitação física e desportiva."},{"icone":"🔬","titulo":"Laboratórios de Análises","desc":"Laboratórios de diagnóstico clínico com tecnologia avançada para análises rápidas e precisas."},{"icone":"🏥","titulo":"Hospitais Privados","desc":"Desenvolvimento e gestão de unidades hospitalares privadas com padrão internacional."},{"icone":"💊","titulo":"Equipamentos Médicos","desc":"Fornecimento e importação de equipamentos médicos e hospitalares certificados para clínicas e hospitais."},{"icone":"🧪","titulo":"Equipamentos de Diagnóstico","desc":"Comercialização de equipamentos de diagnóstico por imagem, ECG, laboratório e bloco operatório."}]',
+        'label' => 'Serviço - Saúde - Lista de Serviços'
+    ],
+    'servico_saude_bem_estar_vantagens' => [
+        'valor' => '[{"icone":"🎓","titulo":"Profissionais de Saúde Qualificados","desc":"Parcerias com médicos, enfermeiros e técnicos de saúde com formação reconhecida."},{"icone":"🌍","titulo":"Equipamentos Certificados","desc":"Fornecimento exclusivo de equipamentos com certificação médica internacional."},{"icone":"💰","titulo":"Preços Acessíveis","desc":"Compromisso com a democratização do acesso a cuidados de saúde de qualidade."},{"icone":"📍","titulo":"Cobertura Regional","desc":"Foco inicial em Huambo, com planos de expansão para outras províncias."}]',
+        'label' => 'Serviço - Saúde - Lista de Vantagens'
+    ],
+    // AGRONEGÓCIO
+    'servico_agronegocio_titulo' => [
+        'valor' => 'Agronegócio',
+        'label' => 'Serviço - Agronegócio - Título'
+    ],
+    'servico_agronegocio_icone' => [
+        'valor' => '🌾',
+        'label' => 'Serviço - Agronegócio - Ícone'
+    ],
+    'servico_agronegocio_desc' => [
+        'valor' => 'Produção, transformação e comercialização de produtos agrícolas — contribuindo para a segurança alimentar e o desenvolvimento rural de Angola.',
+        'label' => 'Serviço - Agronegócio - Descrição'
+    ],
+    'servico_agronegocio_intro' => [
+        'valor' => 'O agronegócio é um dos pilares do futuro de Angola. A Atlas Centro Sul posiciona-se como parceiro estratégico para o desenvolvimento da cadeia de valor agrícola.',
+        'label' => 'Serviço - Agronegócio - Introdução'
+    ],
+    'servico_agronegocio_gradiente' => [
+        'valor' => 'linear-gradient(135deg,#0a1a00,#1a3d00)',
+        'label' => 'Serviço - Agronegócio - Gradiente CSS'
+    ],
+    'servico_agronegocio_servicos' => [
+        'valor' => '[{"icone":"🌱","titulo":"Produção Agrícola","desc":"Exploração de projetos de produção agrícola em larga escala, com foco em culturas prioritárias para Angola."},{"icone":"🏭","titulo":"Transformação Agroindustrial","desc":"Processamento e transformação de matérias-primas agrícolas em produtos de maior valor acrescentado."},{"icone":"🚛","titulo":"Comercialização","desc":"Escoamento e comercialização de produtos agrícolas nos mercados locais, regionais e internacionais."},{"icone":"🐄","titulo":"Pecuária","desc":"Criação e gestão de projetos pecuários integrados na estratégia de agronegócio da empresa."},{"icone":"💧","titulo":"Irrigação e Tecnologia","desc":"Implementação de sistemas de irrigação e tecnologia agrícola para maximizar a produtividade."},{"icone":"🌿","titulo":"Produtos Orgânicos","desc":"Desenvolvimento de linha de produtos orgânicos e naturais com valor premium no mercado."}]',
+        'label' => 'Serviço - Agronegócio - Lista de Serviços'
+    ],
+    'servico_agronegocio_vantagens' => [
+        'valor' => '[{"icone":"🌍","titulo":"Localização Estratégica","desc":"Huambo tem um dos solos mais férteis de Angola — posicionamento ideal para o agronegócio."},{"icone":"🔗","titulo":"Cadeia Completa","desc":"Presença em toda a cadeia de valor: produção, transformação e comercialização."},{"icone":"📈","titulo":"Mercado em Crescimento","desc":"O setor agrícola angolano tem enorme potencial de crescimento e diversificação."},{"icone":"🤝","titulo":"Parcerias Locais","desc":"Colaboração com agricultores locais e cooperativas para crescimento partilhado."}]',
+        'label' => 'Serviço - Agronegócio - Lista de Vantagens'
+    ],
+    // COMÉRCIO & INVESTIMENTOS
+    'servico_comercio_investimentos_titulo' => [
+        'valor' => 'Comércio & Investimentos',
+        'label' => 'Serviço - Comércio - Título'
+    ],
+    'servico_comercio_investimentos_icone' => [
+        'valor' => '🏢',
+        'label' => 'Serviço - Comércio - Ícone'
+    ],
+    'servico_comercio_investimentos_desc' => [
+        'valor' => 'Comércio geral de bens e serviços e gestão estratégica de participações societárias para criar valor no ecossistema empresarial angolano.',
+        'label' => 'Serviço - Comércio - Descrição'
+    ],
+    'servico_comercio_investimentos_intro' => [
+        'valor' => 'O pilar comercial e de investimentos da Atlas sustenta o ecossistema completo da empresa, criando sinergias entre os diferentes setores de atuação.',
+        'label' => 'Serviço - Comércio - Introdução'
+    ],
+    'servico_comercio_investimentos_gradiente' => [
+        'valor' => 'linear-gradient(135deg,#0a0020,#200050)',
+        'label' => 'Serviço - Comércio - Gradiente CSS'
+    ],
+    'servico_comercio_investimentos_servicos' => [
+        'valor' => '[{"icone":"🛒","titulo":"Comércio Geral","desc":"Importação, exportação e distribuição de bens de consumo, industriais e especializados para o mercado angolano."},{"icone":"📦","titulo":"Distribuição e Logística","desc":"Gestão de cadeias de distribuição eficientes para garantir a chegada dos produtos ao cliente final."},{"icone":"🤝","titulo":"Parcerias Estratégicas","desc":"Estabelecimento de parcerias comerciais nacionais e internacionais para ampliar o portfólio de produtos."},{"icone":"📊","titulo":"Gestão de Participações","desc":"Holding empresarial com gestão de participações sociais em sociedades dos setores estratégicos."},{"icone":"💼","titulo":"Consultoria de Negócios","desc":"Apoio a empresas angolanas na estruturação e desenvolvimento dos seus modelos de negócio."},{"icone":"🌐","titulo":"Representações Comerciais","desc":"Representação de marcas e empresas internacionais no mercado angolano."}]',
+        'label' => 'Serviço - Comércio - Lista de Serviços'
+    ],
+    'servico_comercio_investimentos_vantagens' => [
+        'valor' => '[{"icone":"🏢","titulo":"Estrutura Holding","desc":"Capacidade de gestão de múltiplas participações com eficiência e governança corporativa."},{"icone":"🌍","titulo":"Rede de Contactos","desc":"Rede estabelecida de parceiros locais e internacionais para negócios transversais."},{"icone":"⚡","titulo":"Agilidade Comercial","desc":"Capacidade de resposta rápida às oportunidades de mercado graças à estrutura multissectorial."},{"icone":"📈","titulo":"Crescimento Sustentável","desc":"Estratégia de investimento orientada para o crescimento a longo prazo com solidez financeira."}]',
+        'label' => 'Serviço - Comércio - Lista de Vantagens'
     ]
 ];
 
@@ -199,7 +319,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'home_pilar1_icone','home_pilar1_titulo','home_pilar1_desc',
         'home_pilar2_icone','home_pilar2_titulo','home_pilar2_desc',
         'home_pilar3_icone','home_pilar3_titulo','home_pilar3_desc',
-        'home_pilar4_icone','home_pilar4_titulo','home_pilar4_desc'
+        'home_pilar4_icone','home_pilar4_titulo','home_pilar4_desc',
+        'sobre_objeto_social',
+        'servico_energia_industria_titulo', 'servico_energia_industria_icone', 'servico_energia_industria_desc', 'servico_energia_industria_intro', 'servico_energia_industria_gradiente', 'servico_energia_industria_servicos', 'servico_energia_industria_vantagens',
+        'servico_saude_bem_estar_titulo', 'servico_saude_bem_estar_icone', 'servico_saude_bem_estar_desc', 'servico_saude_bem_estar_intro', 'servico_saude_bem_estar_gradiente', 'servico_saude_bem_estar_servicos', 'servico_saude_bem_estar_vantagens',
+        'servico_agronegocio_titulo', 'servico_agronegocio_icone', 'servico_agronegocio_desc', 'servico_agronegocio_intro', 'servico_agronegocio_gradiente', 'servico_agronegocio_servicos', 'servico_agronegocio_vantagens',
+        'servico_comercio_investimentos_titulo', 'servico_comercio_investimentos_icone', 'servico_comercio_investimentos_desc', 'servico_comercio_investimentos_intro', 'servico_comercio_investimentos_gradiente', 'servico_comercio_investimentos_servicos', 'servico_comercio_investimentos_vantagens'
     ];
     $stmt = $pdo->prepare("UPDATE configuracoes SET valor = :valor WHERE chave = :chave");
     foreach ($campos as $campo) {
@@ -281,6 +406,51 @@ function cfgVal(array $c, string $key): string {
             flex-direction: column;
             gap: 24px;
         }
+        /* Sub-Abas dos Serviços */
+        .subtabs-nav {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--gray-200);
+            padding-bottom: 8px;
+            flex-wrap: wrap;
+        }
+        .subtab-btn {
+            padding: 8px 16px;
+            background: #f1f5f9;
+            border: 1px solid var(--gray-300);
+            border-radius: var(--radius);
+            cursor: pointer;
+            font-family: var(--font);
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gray-600);
+            transition: all var(--transition);
+        }
+        .subtab-btn:hover {
+            background: #e2e8f0;
+            color: var(--navy);
+        }
+        .subtab-btn.active {
+            background: var(--navy);
+            color: #fff;
+            border-color: var(--navy);
+        }
+        .subtab-content {
+            display: none;
+        }
+        .subtab-content.active {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .dynamic-list-row {
+            transition: all var(--transition);
+        }
+        .dynamic-list-row:hover {
+            border-color: var(--navy-light) !important;
+            box-shadow: var(--shadow-sm);
+        }
     </style>
 </head>
 <body>
@@ -303,6 +473,7 @@ function cfgVal(array $c, string $key): string {
             <button type="button" class="tab-btn" onclick="changeTab('tab-localizacao')">📍 Localização & Contactos</button>
             <button type="button" class="tab-btn" onclick="changeTab('tab-redes')">📱 Redes Sociais</button>
             <button type="button" class="tab-btn" onclick="changeTab('tab-pilares')">🏛️ Os 4 Pilares</button>
+            <button type="button" class="tab-btn" onclick="changeTab('tab-servicos-detalhe')">🛠️ Páginas de Serviços</button>
         </div>
 
         <form method="POST" action="">
@@ -412,6 +583,13 @@ function cfgVal(array $c, string $key): string {
                             <label>Parágrafo 2 (Secundário / Cultura)</label>
                             <textarea name="home_sobre_texto_2" class="form-control" rows="3"><?= cfgVal($configs,'home_sobre_texto_2') ?></textarea>
                         </div>
+                    </div>
+                </div>
+                <div class="card" style="margin-top: 24px;">
+                    <div class="card-header"><h2>💼 Objeto Social (Página "Sobre Nós")</h2></div>
+                    <div class="card-body">
+                        <p class="form-hint" style="margin-bottom: 16px;">Gerencie as áreas de atuação (Objeto Social) exibidas na página "Sobre Nós" (O Que Fazemos).</p>
+                        <div id="dynamic-list-objeto-social"></div>
                     </div>
                 </div>
             </div>
@@ -684,6 +862,196 @@ function cfgVal(array $c, string $key): string {
                 </div>
             </div>
 
+            <!-- ABA 8: PÁGINAS DE SERVIÇOS DETALHADOS -->
+            <div id="tab-servicos-detalhe" class="tab-content">
+                <div class="subtabs-nav">
+                    <button type="button" class="subtab-btn active" onclick="changeSubTab('subtab-energia')">⚙️ Energia & Indústria</button>
+                    <button type="button" class="subtab-btn" onclick="changeSubTab('subtab-saude')">🏥 Saúde & Bem-Estar</button>
+                    <button type="button" class="subtab-btn" onclick="changeSubTab('subtab-agronegocio')">🌾 Agronegócio</button>
+                    <button type="button" class="subtab-btn" onclick="changeSubTab('subtab-comercio')">🏢 Comércio & Investimentos</button>
+                </div>
+
+                <!-- SUB-ABA 1: ENERGIA & INDÚSTRIA -->
+                <div id="subtab-energia" class="subtab-content active">
+                    <div class="card">
+                        <div class="card-header"><h2>⚙️ Configurações Gerais — Energia & Indústria</h2></div>
+                        <div class="card-body">
+                            <div class="form-row">
+                                <div class="form-group" style="flex: 0 0 120px;">
+                                    <label>Ícone (Emoji)</label>
+                                    <input type="text" name="servico_energia_industria_icone" class="form-control" value="<?= cfgVal($configs,'servico_energia_industria_icone') ?>">
+                                </div>
+                                <div class="form-group">
+                                    <label>Título da Página</label>
+                                    <input type="text" name="servico_energia_industria_titulo" class="form-control" value="<?= cfgVal($configs,'servico_energia_industria_titulo') ?>">
+                                </div>
+                                <div class="form-group">
+                                    <label>Gradiente de Fundo (CSS)</label>
+                                    <input type="text" name="servico_energia_industria_gradiente" class="form-control" value="<?= cfgVal($configs,'servico_energia_industria_gradiente') ?>">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Descrição Curta (SEO / Hero)</label>
+                                <textarea name="servico_energia_industria_desc" class="form-control" rows="2"><?= cfgVal($configs,'servico_energia_industria_desc') ?></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Texto de Introdução (Secção "O que oferecemos")</label>
+                                <textarea name="servico_energia_industria_intro" class="form-control" rows="2"><?= cfgVal($configs,'servico_energia_industria_intro') ?></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header"><h2>🔧 Serviços Oferecidos</h2></div>
+                        <div class="card-body">
+                            <div id="dynamic-list-servicos-energia"></div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header"><h2>📋 Vantagens (Porque escolher a Atlas)</h2></div>
+                        <div class="card-body">
+                            <div id="dynamic-list-vantagens-energia"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SUB-ABA 2: SAÚDE & BEM-ESTAR -->
+                <div id="subtab-saude" class="subtab-content">
+                    <div class="card">
+                        <div class="card-header"><h2>🏥 Configurações Gerais — Saúde & Bem-Estar</h2></div>
+                        <div class="card-body">
+                            <div class="form-row">
+                                <div class="form-group" style="flex: 0 0 120px;">
+                                    <label>Ícone (Emoji)</label>
+                                    <input type="text" name="servico_saude_bem_estar_icone" class="form-control" value="<?= cfgVal($configs,'servico_saude_bem_estar_icone') ?>">
+                                </div>
+                                <div class="form-group">
+                                    <label>Título da Página</label>
+                                    <input type="text" name="servico_saude_bem_estar_titulo" class="form-control" value="<?= cfgVal($configs,'servico_saude_bem_estar_titulo') ?>">
+                                </div>
+                                <div class="form-group">
+                                    <label>Gradiente de Fundo (CSS)</label>
+                                    <input type="text" name="servico_saude_bem_estar_gradiente" class="form-control" value="<?= cfgVal($configs,'servico_saude_bem_estar_gradiente') ?>">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Descrição Curta (SEO / Hero)</label>
+                                <textarea name="servico_saude_bem_estar_desc" class="form-control" rows="2"><?= cfgVal($configs,'servico_saude_bem_estar_desc') ?></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Texto de Introdução (Secção "O que oferecemos")</label>
+                                <textarea name="servico_saude_bem_estar_intro" class="form-control" rows="2"><?= cfgVal($configs,'servico_saude_bem_estar_intro') ?></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header"><h2>🩺 Serviços Oferecidos</h2></div>
+                        <div class="card-body">
+                            <div id="dynamic-list-servicos-saude"></div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header"><h2>📋 Vantagens (Porque escolher a Atlas)</h2></div>
+                        <div class="card-body">
+                            <div id="dynamic-list-vantagens-saude"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SUB-ABA 3: AGRONEGÓCIO -->
+                <div id="subtab-agronegocio" class="subtab-content">
+                    <div class="card">
+                        <div class="card-header"><h2>🌾 Configurações Gerais — Agronegócio</h2></div>
+                        <div class="card-body">
+                            <div class="form-row">
+                                <div class="form-group" style="flex: 0 0 120px;">
+                                    <label>Ícone (Emoji)</label>
+                                    <input type="text" name="servico_agronegocio_icone" class="form-control" value="<?= cfgVal($configs,'servico_agronegocio_icone') ?>">
+                                </div>
+                                <div class="form-group">
+                                    <label>Título da Página</label>
+                                    <input type="text" name="servico_agronegocio_titulo" class="form-control" value="<?= cfgVal($configs,'servico_agronegocio_titulo') ?>">
+                                </div>
+                                <div class="form-group">
+                                    <label>Gradiente de Fundo (CSS)</label>
+                                    <input type="text" name="servico_agronegocio_gradiente" class="form-control" value="<?= cfgVal($configs,'servico_agronegocio_gradiente') ?>">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Descrição Curta (SEO / Hero)</label>
+                                <textarea name="servico_agronegocio_desc" class="form-control" rows="2"><?= cfgVal($configs,'servico_agronegocio_desc') ?></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Texto de Introdução (Secção "O que oferecemos")</label>
+                                <textarea name="servico_agronegocio_intro" class="form-control" rows="2"><?= cfgVal($configs,'servico_agronegocio_intro') ?></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header"><h2>🚜 Serviços Oferecidos</h2></div>
+                        <div class="card-body">
+                            <div id="dynamic-list-servicos-agronegocio"></div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header"><h2>📋 Vantagens (Porque escolher a Atlas)</h2></div>
+                        <div class="card-body">
+                            <div id="dynamic-list-vantagens-agronegocio"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SUB-ABA 4: COMÉRCIO & INVESTIMENTOS -->
+                <div id="subtab-comercio" class="subtab-content">
+                    <div class="card">
+                        <div class="card-header"><h2>🏢 Configurações Gerais — Comércio & Investimentos</h2></div>
+                        <div class="card-body">
+                            <div class="form-row">
+                                <div class="form-group" style="flex: 0 0 120px;">
+                                    <label>Ícone (Emoji)</label>
+                                    <input type="text" name="servico_comercio_investimentos_icone" class="form-control" value="<?= cfgVal($configs,'servico_comercio_investimentos_icone') ?>">
+                                </div>
+                                <div class="form-group">
+                                    <label>Título da Página</label>
+                                    <input type="text" name="servico_comercio_investimentos_titulo" class="form-control" value="<?= cfgVal($configs,'servico_comercio_investimentos_titulo') ?>">
+                                </div>
+                                <div class="form-group">
+                                    <label>Gradiente de Fundo (CSS)</label>
+                                    <input type="text" name="servico_comercio_investimentos_gradiente" class="form-control" value="<?= cfgVal($configs,'servico_comercio_investimentos_gradiente') ?>">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Descrição Curta (SEO / Hero)</label>
+                                <textarea name="servico_comercio_investimentos_desc" class="form-control" rows="2"><?= cfgVal($configs,'servico_comercio_investimentos_desc') ?></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Texto de Introdução (Secção "O que oferecemos")</label>
+                                <textarea name="servico_comercio_investimentos_intro" class="form-control" rows="2"><?= cfgVal($configs,'servico_comercio_investimentos_intro') ?></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header"><h2>🛍️ Serviços Oferecidos</h2></div>
+                        <div class="card-body">
+                            <div id="dynamic-list-servicos-comercio"></div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header"><h2>📋 Vantagens (Porque escolher a Atlas)</h2></div>
+                        <div class="card-body">
+                            <div id="dynamic-list-vantagens-comercio"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- BOTÃO FIXO DE SUBMISSÃO -->
             <div style="display:flex;justify-content:flex-end;margin-top:24px;">
                 <button type="submit" class="btn btn-primary" style="padding:14px 40px; font-size:15px; font-weight:700;">
@@ -711,8 +1079,98 @@ function changeTab(tabId) {
     localStorage.setItem('active_config_tab', tabId);
 }
 
-// Restaurar a aba ativa após refresh/postback
+function changeSubTab(subTabId) {
+    // Esconder todas as sub-abas
+    document.querySelectorAll('.subtab-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.subtab-btn').forEach(el => el.classList.remove('active'));
+    
+    // Mostrar a sub-aba selecionada
+    document.getElementById(subTabId).classList.add('active');
+    
+    // Encontrar o botão clicado e marcá-lo como ativo
+    const btn = document.querySelector(`.subtab-btn[onclick*="${subTabId}"]`);
+    if (btn) btn.classList.add('active');
+    
+    // Gravar sub-aba ativa no localStorage
+    localStorage.setItem('active_config_subtab', subTabId);
+}
+
+function initDynamicList(containerId, inputName, currentValue) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    // Criar o input hidden para enviar no form POST
+    const hiddenInput = document.createElement('input');
+    hiddenInput.type = 'hidden';
+    hiddenInput.name = inputName;
+    hiddenInput.value = currentValue || '[]';
+    container.parentNode.insertBefore(hiddenInput, container);
+
+    let items = [];
+    try {
+        items = JSON.parse(hiddenInput.value || '[]');
+    } catch(e) {
+        items = [];
+    }
+
+    function render() {
+        container.innerHTML = '';
+        
+        items.forEach((item, index) => {
+            const row = document.createElement('div');
+            row.className = 'dynamic-list-row';
+            row.style = 'display: flex; gap: 12px; margin-bottom: 12px; align-items: stretch; background: var(--off-white); padding: 12px; border-radius: var(--radius); border: 1px solid var(--gray-200);';
+            row.innerHTML = `
+                <div style="flex: 0 0 80px;">
+                    <label style="font-size: 11px; font-weight: 700; display: block; margin-bottom: 4px; color: var(--gray-500);">Ícone</label>
+                    <input type="text" placeholder="Emoji" value="${item.icone || ''}" class="form-control list-icon" style="text-align: center; font-size: 18px; height: 38px;">
+                </div>
+                <div style="flex: 1;">
+                    <label style="font-size: 11px; font-weight: 700; display: block; margin-bottom: 4px; color: var(--gray-500);">Título</label>
+                    <input type="text" placeholder="Título" value="${item.titulo || ''}" class="form-control list-title" style="height: 38px;">
+                </div>
+                <div style="flex: 2;">
+                    <label style="font-size: 11px; font-weight: 700; display: block; margin-bottom: 4px; color: var(--gray-500);">Descrição</label>
+                    <textarea placeholder="Descrição..." class="form-control list-desc" rows="1" style="resize: vertical; min-height: 38px; padding: 8px 12px;">${item.desc || ''}</textarea>
+                </div>
+                <div style="display: flex; align-items: flex-end;">
+                    <button type="button" class="btn btn-danger remove-btn" style="height: 38px; padding: 0 16px; font-size: 14px; font-weight: bold; border-radius: var(--radius);">❌</button>
+                </div>
+            `;
+            
+            // Eventos
+            row.querySelector('.list-icon').addEventListener('input', (e) => { items[index].icone = e.target.value; update(); });
+            row.querySelector('.list-title').addEventListener('input', (e) => { items[index].titulo = e.target.value; update(); });
+            row.querySelector('.list-desc').addEventListener('input', (e) => { items[index].desc = e.target.value; update(); });
+            row.querySelector('.remove-btn').addEventListener('click', () => { items.splice(index, 1); render(); update(); });
+            
+            container.appendChild(row);
+        });
+
+        // Botão de Adicionar
+        const addBtn = document.createElement('button');
+        addBtn.type = 'button';
+        addBtn.className = 'btn btn-navy btn-sm';
+        addBtn.style = 'margin-top: 8px; border-radius: var(--radius); padding: 8px 16px;';
+        addBtn.innerHTML = '➕ Adicionar Novo Item';
+        addBtn.addEventListener('click', () => {
+            items.push({ icone: '📌', titulo: '', desc: '' });
+            render();
+            update();
+        });
+        container.appendChild(addBtn);
+    }
+
+    function update() {
+        hiddenInput.value = JSON.stringify(items);
+    }
+
+    render();
+}
+
+// Restaurar abas e sub-abas, e iniciar as listas dinâmicas
 document.addEventListener('DOMContentLoaded', () => {
+    // Restaurar aba ativa
     const activeTab = localStorage.getItem('active_config_tab') || 'tab-geral';
     const btn = document.querySelector(`.tab-btn[onclick*="${activeTab}"]`);
     if (btn) {
@@ -721,6 +1179,31 @@ document.addEventListener('DOMContentLoaded', () => {
         const firstBtn = document.querySelector('.tab-btn');
         if (firstBtn) firstBtn.click();
     }
+
+    // Restaurar sub-aba ativa
+    const activeSubTab = localStorage.getItem('active_config_subtab') || 'subtab-energia';
+    const subBtn = document.querySelector(`.subtab-btn[onclick*="${activeSubTab}"]`);
+    if (subBtn) {
+        subBtn.click();
+    } else {
+        const firstSubBtn = document.querySelector('.subtab-btn');
+        if (firstSubBtn) firstSubBtn.click();
+    }
+
+    // Inicializar listas dinâmicas
+    initDynamicList('dynamic-list-objeto-social', 'sobre_objeto_social', <?= json_encode(config('sobre_objeto_social'), JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>);
+    
+    initDynamicList('dynamic-list-servicos-energia', 'servico_energia_industria_servicos', <?= json_encode(config('servico_energia_industria_servicos'), JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>);
+    initDynamicList('dynamic-list-vantagens-energia', 'servico_energia_industria_vantagens', <?= json_encode(config('servico_energia_industria_vantagens'), JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>);
+
+    initDynamicList('dynamic-list-servicos-saude', 'servico_saude_bem_estar_servicos', <?= json_encode(config('servico_saude_bem_estar_servicos'), JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>);
+    initDynamicList('dynamic-list-vantagens-saude', 'servico_saude_bem_estar_vantagens', <?= json_encode(config('servico_saude_bem_estar_vantagens'), JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>);
+
+    initDynamicList('dynamic-list-servicos-agronegocio', 'servico_agronegocio_servicos', <?= json_encode(config('servico_agronegocio_servicos'), JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>);
+    initDynamicList('dynamic-list-vantagens-agronegocio', 'servico_agronegocio_vantagens', <?= json_encode(config('servico_agronegocio_vantagens'), JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>);
+
+    initDynamicList('dynamic-list-servicos-comercio', 'servico_comercio_investimentos_servicos', <?= json_encode(config('servico_comercio_investimentos_servicos'), JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>);
+    initDynamicList('dynamic-list-vantagens-comercio', 'servico_comercio_investimentos_vantagens', <?= json_encode(config('servico_comercio_investimentos_vantagens'), JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>);
 });
 </script>
 </body>

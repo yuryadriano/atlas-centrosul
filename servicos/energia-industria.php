@@ -1,12 +1,14 @@
 <?php
 require_once __DIR__ . '/../app/helpers.php';
 $servicoSlug      = 'energia-industria';
-$servicoTitulo    = 'Energia & Indústria';
-$servicoIcone     = '⚙️';
-$servicoDesc      = 'Serviços industriais especializados e suporte técnico ao sector petrolífero, onshore e offshore, em Angola.';
-$servicoGradiente = 'linear-gradient(135deg,#1a0a00,#3d1a00)';
-$servicoIntro     = 'Com equipas técnicas qualificadas, a Atlas oferece soluções industriais completas para os mais exigentes setores da economia angolana.';
-$servicoServicos  = [
+$servicoTitulo    = config('servico_energia_industria_titulo', 'Energia & Indústria');
+$servicoIcone     = config('servico_energia_industria_icone', '⚙️');
+$servicoDesc      = config('servico_energia_industria_desc', 'Serviços industriais especializados e suporte técnico ao sector petrolífero, onshore e offshore, em Angola.');
+$servicoGradiente = config('servico_energia_industria_gradiente', 'linear-gradient(135deg,#1a0a00,#3d1a00)');
+$servicoIntro     = config('servico_energia_industria_intro', 'Com equipas técnicas qualificadas, a Atlas oferece soluções industriais completas para os mais exigentes setores da economia angolana.');
+
+$servicosJson     = config('servico_energia_industria_servicos');
+$servicoServicos  = $servicosJson ? json_decode($servicosJson, true) : [
     ['icone'=>'🔧','titulo'=>'Manutenção Eletromecânica','desc'=>'Manutenção preventiva e corretiva de equipamentos eletromecânicos industriais, garantindo continuidade operacional.'],
     ['icone'=>'🔩','titulo'=>'Soldadura Industrial','desc'=>'Serviços de soldadura MIG, TIG e elétrica para estruturas metálicas, tubagens e equipamentos industriais.'],
     ['icone'=>'🎨','titulo'=>'Pintura Industrial','desc'=>'Tratamento anticorrosivo e pintura de estruturas metálicas, equipamentos e instalações industriais.'],
@@ -18,7 +20,9 @@ $servicoServicos  = [
     ['icone'=>'💧','titulo'=>'Engenharia Hidráulica','desc'=>'Projetos e soluções para sistemas de abastecimento de água, saneamento, drenagem e gestão de recursos hídricos.'],
     ['icone'=>'💻','titulo'=>'Engenharia Informática','desc'=>'Desenvolvimento de software, gestão de infraestruturas de rede, segurança da informação e suporte tecnológico.'],
 ];
-$servicoVantagens = [
+
+$vantagensJson    = config('servico_energia_industria_vantagens');
+$servicoVantagens = $vantagensJson ? json_decode($vantagensJson, true) : [
     ['icone'=>'✅','titulo'=>'Equipas Qualificadas','desc'=>'Técnicos com formação especializada e experiência comprovada no setor industrial.'],
     ['icone'=>'⏱️','titulo'=>'Resposta Rápida','desc'=>'Disponibilidade para intervenções urgentes e contratos de manutenção contínua.'],
     ['icone'=>'🔒','titulo'=>'Segurança em Primeiro Lugar','desc'=>'Cumprimento rigoroso de normas de segurança industrial e ocupacional.'],

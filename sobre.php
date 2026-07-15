@@ -80,37 +80,25 @@ $navSolid  = true;
             <h2 class="section-title">O Que Fazemos</h2>
             <p class="section-lead" style="margin:0 auto;text-align:center;">Conforme os estatutos da empresa, a Atlas Centro Sul tem por objeto o exercício das seguintes atividades:</p>
         </div>
+        <?php
+        $objetoSocialJson = config('sobre_objeto_social');
+        $objetosSociais = $objetoSocialJson ? json_decode($objetoSocialJson, true) : [
+            ['icone'=>'⚙️','titulo'=>'Serviços Industriais','desc'=>'Prestação de serviços industriais incluindo soldadura, pintura, manutenção eletromecânica e eletrónica. Suporte técnico especializado para unidades industriais.'],
+            ['icone'=>'🛢️','titulo'=>'Sector Petrolífero','desc'=>'Atuação no setor petrolífero, onshore e offshore, incluindo manutenção, logística e serviços de apoio técnico a operadoras e contratantes.'],
+            ['icone'=>'🏥','titulo'=>'Saúde','desc'=>'Criação e exploração de projetos no ramo da saúde: clínicas, hospitais, fisioterapia, laboratórios e fornecimento de equipamentos médicos e hospitalares.'],
+            ['icone'=>'🌾','titulo'=>'Agronegócio','desc'=>'Agronomia e agronegócio, incluindo produção, transformação e comercialização de produtos agrícolas — contribuindo para a segurança alimentar nacional.'],
+            ['icone'=>'🛒','titulo'=>'Comércio Geral','desc'=>'Comércio geral de bens e serviços, respondendo às diversas necessidades do mercado angolano com qualidade e competitividade.'],
+            ['icone'=>'🏢','titulo'=>'Holding & Investimentos','desc'=>'Gestão de participações sociais noutras sociedades (holding), contribuindo para o desenvolvimento do ecossistema empresarial angolano.']
+        ];
+        ?>
         <div class="card-grid-3">
+            <?php foreach ($objetosSociais as $obj): ?>
             <div class="feature-card">
-                <div class="feature-icon">⚙️</div>
-                <h3>Serviços Industriais</h3>
-                <p>Prestação de serviços industriais incluindo soldadura, pintura, manutenção eletromecânica e eletrónica. Suporte técnico especializado para unidades industriais.</p>
+                <div class="feature-icon"><?= htmlspecialchars($obj['icone'] ?? '📌') ?></div>
+                <h3><?= htmlspecialchars($obj['titulo'] ?? '') ?></h3>
+                <p><?= htmlspecialchars($obj['desc'] ?? '') ?></p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">🛢️</div>
-                <h3>Sector Petrolífero</h3>
-                <p>Atuação no setor petrolífero, onshore e offshore, incluindo manutenção, logística e serviços de apoio técnico a operadoras e contratantes.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🏥</div>
-                <h3>Saúde</h3>
-                <p>Criação e exploração de projetos no ramo da saúde: clínicas, hospitais, fisioterapia, laboratórios e fornecimento de equipamentos médicos e hospitalares.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🌾</div>
-                <h3>Agronegócio</h3>
-                <p>Agronomia e agronegócio, incluindo produção, transformação e comercialização de produtos agrícolas — contribuindo para a segurança alimentar nacional.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🛒</div>
-                <h3>Comércio Geral</h3>
-                <p>Comércio geral de bens e serviços, respondendo às diversas necessidades do mercado angolano com qualidade e competitividade.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🏢</div>
-                <h3>Holding & Investimentos</h3>
-                <p>Gestão de participações sociais noutras sociedades (holding), contribuindo para o desenvolvimento do ecossistema empresarial angolano.</p>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>
