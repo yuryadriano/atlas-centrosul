@@ -79,6 +79,8 @@ CREATE TABLE IF NOT EXISTS configuracoes (
 INSERT INTO configuracoes (chave, valor, label) VALUES
 ('site_nome',         'Atlas Centro Sul',                                          'Nome do Site'),
 ('site_slogan',       'Uma Marca, Múltiplas Soluções.',                            'Slogan'),
+('site_slogan_1',     'Uma Marca',                                                 'Slogan - Linha 1'),
+('site_slogan_2',     'Múltiplas Soluções.',                                       'Slogan - Linha 2'),
 ('empresa_nome',      'Atlas Centro Sul — Comércio e Serviços, Lda',              'Nome Legal da Empresa'),
 ('empresa_nif',       'NIF da Empresa',                                            'NIF'),
 ('morada',            'Bairro São Jão, Rua Principal, casa n.º Junto A Escola 103, Huambo', 'Morada'),

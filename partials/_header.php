@@ -9,17 +9,25 @@ function navAtivo(string $caminho): string {
     global $paginaActual;
     return strpos($paginaActual, $caminho) !== false ? 'ativo' : '';
 }
+
+$s1 = config('site_slogan_1');
+$s2 = config('site_slogan_2');
+if (!empty($s1) || !empty($s2)) {
+    $sloganGlobal = $s1 . ($s2 ? ', ' . $s2 : '');
+} else {
+    $sloganGlobal = config('site_slogan', 'Uma Marca, Múltiplas Soluções.');
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="<?= htmlspecialchars($metaDesc ?? config('site_slogan', 'Uma Marca, Múltiplas Soluções.') . ' — ' . config('empresa_nome')) ?>">
+    <meta name="description" content="<?= htmlspecialchars($metaDesc ?? $sloganGlobal . ' — ' . config('empresa_nome')) ?>">
     <meta property="og:title" content="<?= htmlspecialchars($pageTitle ?? config('site_nome', 'Atlas Centro Sul')) ?>">
     <meta property="og:description" content="<?= htmlspecialchars($metaDesc ?? config('sobre_resumo', '')) ?>">
     <meta property="og:type" content="website">
-    <title><?= htmlspecialchars(($pageTitle ?? '') ? $pageTitle . ' — ' . config('site_nome', 'Atlas Centro Sul') : config('site_nome', 'Atlas Centro Sul') . ' — ' . config('site_slogan', 'Uma Marca, Múltiplas Soluções.')) ?></title>
+    <title><?= htmlspecialchars(($pageTitle ?? '') ? $pageTitle . ' — ' . config('site_nome', 'Atlas Centro Sul') : config('site_nome', 'Atlas Centro Sul') . ' — ' . $sloganGlobal) ?></title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="/atlas/assets/css/style.css?v=<?= time() ?>">
     <?= $extraHead ?? '' ?>

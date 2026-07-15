@@ -43,10 +43,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['formulario_contacto']
      ══════════════════════════════════════════════ -->
 <?php
 // Tratar slogan dinâmico para manter estilo de quebra e cor na segunda parte
-$slogan = config('site_slogan', 'Uma Marca, Múltiplas Soluções.');
-$partes = explode(',', $slogan, 2);
-$slogan1 = trim($partes[0] ?? 'Uma Marca');
-$slogan2 = trim($partes[1] ?? 'Múltiplas Soluções.');
+$slogan1 = config('site_slogan_1');
+$slogan2 = config('site_slogan_2');
+if (empty($slogan1) && empty($slogan2)) {
+    $slogan = config('site_slogan', 'Uma Marca, Múltiplas Soluções.');
+    $partes = explode(',', $slogan, 2);
+    $slogan1 = trim($partes[0] ?? 'Uma Marca');
+    $slogan2 = trim($partes[1] ?? 'Múltiplas Soluções.');
+}
 ?>
 <?php if ($videoYoutube): ?>
 <section class="hero-video" id="hero">

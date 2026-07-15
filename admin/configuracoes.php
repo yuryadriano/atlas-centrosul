@@ -10,7 +10,25 @@ $pdo   = getDB();
 $flash = obterFlash();
 
 // Garantir que todas as chaves de configuração novas existem no banco de dados
+$sloganAtual = '';
+try {
+    $stmtSlogan = $pdo->query("SELECT valor FROM configuracoes WHERE chave = 'site_slogan' LIMIT 1");
+    $sloganAtual = $stmtSlogan->fetchColumn() ?: '';
+} catch (Exception $e) {}
+
+$partesSlogan = explode(',', $sloganAtual, 2);
+$defaultS1 = trim($partesSlogan[0] ?? 'Uma Marca');
+$defaultS2 = trim($partesSlogan[1] ?? 'Múltiplas Soluções.');
+
 $novasConfigs = [
+    'site_slogan_1' => [
+        'valor' => $defaultS1 ?: 'Uma Marca',
+        'label' => 'Slogan - Linha 1'
+    ],
+    'site_slogan_2' => [
+        'valor' => $defaultS2 ?: 'Múltiplas Soluções.',
+        'label' => 'Slogan - Linha 2'
+    ],
     'sobre_missao' => [
         'valor' => 'Criar valor sustentável para Angola através de soluções multissectoriais inovadoras, com rigor técnico e compromisso com as comunidades onde atuamos.',
         'label' => 'Missão da Empresa'
@@ -93,7 +111,7 @@ foreach ($novasConfigs as $chave => $info) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $campos = [
-        'site_nome','site_slogan','empresa_nome','empresa_nif','morada','municipio','provincia','pais',
+        'site_nome','site_slogan_1','site_slogan_2','empresa_nome','empresa_nif','morada','municipio','provincia','pais',
         'email_geral','email_comercial','email_tecnico','telefone_1','telefone_2','whatsapp',
         'facebook','instagram','linkedin','youtube','sobre_resumo','ano_fundacao','maps_embed',
         'sobre_missao','sobre_visao','sobre_valores','sobre_texto',
@@ -107,6 +125,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->execute([':valor' => trim($_POST[$campo]), ':chave' => $campo]);
         }
     }
+    
+    // Atualizar site_slogan para retrocompatibilidade
+    $s1 = trim($_POST['site_slogan_1'] ?? '');
+    $s2 = trim($_POST['site_slogan_2'] ?? '');
+    $sloganConcatenado = $s1 . ($s2 ? ', ' . $s2 : '');
+    $stmt->execute([':valor' => $sloganConcatenado, ':chave' => 'site_slogan']);
+    
     flashMensagem('success', 'Configurações guardadas com sucesso!');
     header('Location: /atlas/admin/configuracoes.php');
     exit;
@@ -211,9 +236,14 @@ function cfgVal(array $c, string $key): string {
                                 <input type="text" name="site_nome" class="form-control" value="<?= cfgVal($configs,'site_nome') ?>">
                             </div>
                             <div class="form-group">
-                                <label>Slogan da Empresa</label>
-                                <input type="text" name="site_slogan" class="form-control" value="<?= cfgVal($configs,'site_slogan') ?>">
-                                <p class="form-hint">Dica: Use vírgula para quebrar a linha no banner (Ex: Uma Marca, Múltiplas Soluções).</p>
+                                <label>Slogan - Linha 1 (Topo)</label>
+                                <input type="text" name="site_slogan_1" class="form-control" value="<?= cfgVal($configs,'site_slogan_1') ?>">
+                                <p class="form-hint">Ex: Uma Marca</p>
+                            </div>
+                            <div class="form-group">
+                                <label>Slogan - Linha 2 (Destaque)</label>
+                                <input type="text" name="site_slogan_2" class="form-control" value="<?= cfgVal($configs,'site_slogan_2') ?>">
+                                <p class="form-hint">Ex: Múltiplas Soluções.</p>
                             </div>
                         </div>
                         <div class="form-row">
