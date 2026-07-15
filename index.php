@@ -140,17 +140,12 @@ if (empty($slogan1) && empty($slogan2)) {
     </div>
     <!-- Texto no lado direito -->
     <div class="split-content" style="background:var(--off-white);">
-        <span class="section-eyebrow">Quem Somos</span>
+        <span class="section-eyebrow"><?= htmlspecialchars(config('home_sobre_subtitulo', 'Quem Somos')) ?></span>
         <h2 class="section-title" style="margin-bottom:24px;">
-            A Atlas<br>Centro Sul
+            <?= nl2br(htmlspecialchars(config('home_sobre_titulo', "A Atlas\nCentro Sul"))) ?>
         </h2>
-        <p style="font-size:16px;line-height:1.85;margin-bottom:20px;">
-            Fundada em <strong style="color:var(--navy);"><?= htmlspecialchars(config('ano_fundacao', '2025')) ?></strong> em Huambo, a Atlas Centro Sul — Comércio e Serviços, Lda nasceu da visão de empreendedores angolanos determinados a criar uma empresa de referência no centro-sul de Angola.
-        </p>
-        <p style="font-size:15px;color:var(--gray-500);line-height:1.8;margin-bottom:32px;">
-            Duas palavras dão vida à nossa cultura: <strong style="color:var(--navy);">Fazemos Acontecer!</strong>
-            Assumimos um papel activo na construção de uma Angola mais sustentável e com mais serviços.
-        </p>
+        <p style="font-size:16px;line-height:1.85;margin-bottom:20px;white-space:pre-line;"><?= htmlspecialchars(config('home_sobre_texto_1', 'Fundada em 2025 em Huambo, a Atlas Centro Sul — Comércio e Serviços, Lda nasceu da visão de empreendedores angolanos determinados a criar uma empresa de referência no centro-sul de Angola.')) ?></p>
+        <p style="font-size:15px;color:var(--gray-500);line-height:1.8;margin-bottom:32px;white-space:pre-line;"><?= htmlspecialchars(config('home_sobre_texto_2', 'Duas palavras dão vida à nossa cultura: Fazemos Acontecer! Assumimos um papel activo na construção de uma Angola mais sustentável e com mais serviços.')) ?></p>
         <div style="display:flex;gap:12px;flex-wrap:wrap;">
             <a href="/atlas/sobre.php" class="btn btn-navy">A Nossa História</a>
             <a href="/atlas/contacto.php" class="btn btn-outline-navy">Contacto</a>
@@ -197,40 +192,38 @@ if (empty($slogan1) && empty($slogan2)) {
     <div class="container">
         <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:56px;gap:24px;flex-wrap:wrap;">
             <div>
-                <span class="section-eyebrow">Ecossistema Atlas</span>
-                <h2 class="section-title">Os 4 Pilares<br>Estratégicos</h2>
+                <span class="section-eyebrow"><?= htmlspecialchars(config('home_pilares_subtitulo', 'Ecossistema Atlas')) ?></span>
+                <h2 class="section-title"><?= nl2br(htmlspecialchars(config('home_pilares_titulo', "Os 4 Pilares\nEstratégicos"))) ?></h2>
             </div>
-            <p class="section-lead" style="max-width:420px;">
-                Atuamos em setores complementares que se fortalecem mutuamente — da energia ao campo, da saúde ao comércio.
-            </p>
+            <p class="section-lead" style="max-width:420px;white-space:pre-line;"><?= htmlspecialchars(config('home_pilares_lead', 'Atuamos em setores complementares que se fortalecem mutuamente — da energia ao campo, da saúde ao comércio.')) ?></p>
         </div>
         <div class="pilares-grid">
             <a href="/atlas/servicos/energia-industria.php" class="pilar-card">
                 <span class="pilar-num">Pilar 01</span>
-                <span class="pilar-icon">⚙️</span>
-                <h3 class="pilar-title">Energia &<br>Indústria</h3>
-                <p class="pilar-desc">Manutenção eletromecânica, soldadura, pintura industrial e apoio técnico ao sector petrolífero onshore e offshore.</p>
+                <span class="pilar-icon"><?= htmlspecialchars(config('home_pilar1_icone', '⚙️')) ?></span>
+                <h3 class="pilar-title"><?= nl2br(htmlspecialchars(config('home_pilar1_titulo', "Energia &\nIndústria"))) ?></h3>
+                <p class="pilar-desc"><?= htmlspecialchars(config('home_pilar1_desc', 'Manutenção eletromecânica, soldadura, pintura industrial e apoio técnico ao sector petrolífero onshore e offshore.')) ?></p>
                 <span class="pilar-link">Saber mais →</span>
             </a>
             <a href="/atlas/servicos/saude-bem-estar.php" class="pilar-card">
                 <span class="pilar-num">Pilar 02</span>
-                <span class="pilar-icon">🏥</span>
-                <h3 class="pilar-title">Saúde &<br>Bem-Estar</h3>
-                <p class="pilar-desc">Clínicas, fisioterapia, laboratórios e fornecimento de equipamentos médicos e hospitalares de alta qualidade.</p>
+                <span class="pilar-icon"><?= htmlspecialchars(config('home_pilar2_icone', '🏥')) ?></span>
+                <h3 class="pilar-title"><?= nl2br(htmlspecialchars(config('home_pilar2_titulo', "Saúde &\nBem-Estar"))) ?></h3>
+                <p class="pilar-desc"><?= htmlspecialchars(config('home_pilar2_desc', 'Clínicas, fisioterapia, laboratórios e fornecimento de equipamentos médicos e hospitalares de alta qualidade.')) ?></p>
                 <span class="pilar-link">Saber mais →</span>
             </a>
             <a href="/atlas/servicos/agronegocio.php" class="pilar-card">
                 <span class="pilar-num">Pilar 03</span>
-                <span class="pilar-icon">🌾</span>
-                <h3 class="pilar-title">Agronegócio</h3>
-                <p class="pilar-desc">Produção, transformação e comercialização de produtos agrícolas — do campo ao mercado, contribuindo para a segurança alimentar.</p>
+                <span class="pilar-icon"><?= htmlspecialchars(config('home_pilar3_icone', '🌾')) ?></span>
+                <h3 class="pilar-title"><?= nl2br(htmlspecialchars(config('home_pilar3_titulo', "Agronegócio"))) ?></h3>
+                <p class="pilar-desc"><?= htmlspecialchars(config('home_pilar3_desc', 'Produção, transformação e comercialização de produtos agrícolas — do campo ao mercado, contribuindo para a segurança alimentar.')) ?></p>
                 <span class="pilar-link">Saber mais →</span>
             </a>
             <a href="/atlas/servicos/comercio-investimentos.php" class="pilar-card">
                 <span class="pilar-num">Pilar 04</span>
-                <span class="pilar-icon">🏢</span>
-                <h3 class="pilar-title">Comércio &<br>Investimentos</h3>
-                <p class="pilar-desc">Comércio geral de bens e serviços e gestão de participações sociais em empresas parceiras do ecossistema Atlas.</p>
+                <span class="pilar-icon"><?= htmlspecialchars(config('home_pilar4_icone', '🏢')) ?></span>
+                <h3 class="pilar-title"><?= nl2br(htmlspecialchars(config('home_pilar4_titulo', "Comércio &\nInvestimentos"))) ?></h3>
+                <p class="pilar-desc"><?= htmlspecialchars(config('home_pilar4_desc', 'Comércio geral de bens e serviços e gestão de participações sociais em empresas parceiras do ecossistema Atlas.')) ?></p>
                 <span class="pilar-link">Saber mais →</span>
             </a>
         </div>

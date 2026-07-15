@@ -113,7 +113,26 @@ INSERT INTO configuracoes (chave, valor, label) VALUES
 ('manifesto_titulo',   'Fazemos\nAcontecer!',                                       'Título do Manifesto'),
 ('manifesto_texto',    'Assumimos um papel activo na construção de uma Angola mais sustentável, mais próxima e com mais serviços.', 'Texto do Manifesto'),
 ('ano_fundacao',      '2025',                                                       'Ano de Fundação'),
-('maps_embed',        '',                                                           'Google Maps Embed URL');
+('maps_embed',        '',                                                           'Google Maps Embed URL'),
+('home_sobre_subtitulo','Quem Somos',                                                'Homepage - Sobre Nós - Subtítulo'),
+('home_sobre_titulo',  'A Atlas\nCentro Sul',                                       'Homepage - Sobre Nós - Título'),
+('home_sobre_texto_1', 'Fundada em 2025 em Huambo, a Atlas Centro Sul — Comércio e Serviços, Lda nasceu da visão de empreendedores angolanos determinados a criar uma empresa de referência no centro-sul de Angola.', 'Homepage - Sobre Nós - Parágrafo 1'),
+('home_sobre_texto_2', 'Duas palavras dão vida à nossa cultura: Fazemos Acontecer! Assumimos um papel activo na construção de uma Angola mais sustentável e com mais serviços.', 'Homepage - Sobre Nós - Parágrafo 2'),
+('home_pilares_subtitulo','Ecossistema Atlas',                                        'Homepage - Pilares - Subtítulo'),
+('home_pilares_titulo','Os 4 Pilares\nEstratégicos',                                  'Homepage - Pilares - Título'),
+('home_pilares_lead',  'Atuamos em setores complementares que se fortalecem mutuamente — da energia ao campo, da saúde ao comércio.', 'Homepage - Pilares - Introdução'),
+('home_pilar1_icone',  '⚙️',                                                         'Homepage - Pilar 1 - Ícone'),
+('home_pilar1_titulo', 'Energia &\nIndústria',                                       'Homepage - Pilar 1 - Título'),
+('home_pilar1_desc',   'Manutenção eletromecânica, soldadura, pintura industrial e apoio técnico ao sector petrolífero onshore e offshore.', 'Homepage - Pilar 1 - Descrição'),
+('home_pilar2_icone',  '🏥',                                                         'Homepage - Pilar 2 - Ícone'),
+('home_pilar2_titulo', 'Saúde &\nBem-Estar',                                         'Homepage - Pilar 2 - Título'),
+('home_pilar2_desc',   'Clínicas, fisioterapia, laboratórios e fornecimento de equipamentos médicos e hospitalares de alta qualidade.', 'Homepage - Pilar 2 - Descrição'),
+('home_pilar3_icone',  '🌾',                                                         'Homepage - Pilar 3 - Ícone'),
+('home_pilar3_titulo', 'Agronegócio',                                               'Homepage - Pilar 3 - Título'),
+('home_pilar3_desc',   'Produção, transformação e comercialização de produtos agrícolas — do campo ao mercado, contribuindo para a segurança alimentar.', 'Homepage - Pilar 3 - Descrição'),
+('home_pilar4_icone',  '🏢',                                                         'Homepage - Pilar 4 - Ícone'),
+('home_pilar4_titulo', 'Comércio &\nInvestimentos',                                 'Homepage - Pilar 4 - Título'),
+('home_pilar4_desc',   'Comércio geral de bens e serviços e gestão de participações sociais em empresas parceiras do ecossistema Atlas.', 'Homepage - Pilar 4 - Descrição');
 
 -- ------------------------------------------------------------
 -- Utilizador Administrador Inicial

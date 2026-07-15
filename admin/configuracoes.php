@@ -92,6 +92,82 @@ $novasConfigs = [
     'empresa_nif' => [
         'valor' => 'NIF da Empresa',
         'label' => 'NIF'
+    ],
+    'home_sobre_subtitulo' => [
+        'valor' => 'Quem Somos',
+        'label' => 'Homepage - Sobre Nós - Subtítulo'
+    ],
+    'home_sobre_titulo' => [
+        'valor' => "A Atlas\nCentro Sul",
+        'label' => 'Homepage - Sobre Nós - Título'
+    ],
+    'home_sobre_texto_1' => [
+        'valor' => 'Fundada em 2025 em Huambo, a Atlas Centro Sul — Comércio e Serviços, Lda nasceu da visão de empreendedores angolanos determinados a criar uma empresa de referência no centro-sul de Angola.',
+        'label' => 'Homepage - Sobre Nós - Parágrafo 1'
+    ],
+    'home_sobre_texto_2' => [
+        'valor' => 'Duas palavras dão vida à nossa cultura: Fazemos Acontecer! Assumimos um papel activo na construção de uma Angola mais sustentável e com mais serviços.',
+        'label' => 'Homepage - Sobre Nós - Parágrafo 2'
+    ],
+    'home_pilares_subtitulo' => [
+        'valor' => 'Ecossistema Atlas',
+        'label' => 'Homepage - Pilares - Subtítulo'
+    ],
+    'home_pilares_titulo' => [
+        'valor' => "Os 4 Pilares\nEstratégicos",
+        'label' => 'Homepage - Pilares - Título'
+    ],
+    'home_pilares_lead' => [
+        'valor' => 'Atuamos em setores complementares que se fortalecem mutuamente — da energia ao campo, da saúde ao comércio.',
+        'label' => 'Homepage - Pilares - Introdução'
+    ],
+    'home_pilar1_icone' => [
+        'valor' => '⚙️',
+        'label' => 'Homepage - Pilar 1 - Ícone'
+    ],
+    'home_pilar1_titulo' => [
+        'valor' => "Energia &\nIndústria",
+        'label' => 'Homepage - Pilar 1 - Título'
+    ],
+    'home_pilar1_desc' => [
+        'valor' => 'Manutenção eletromecânica, soldadura, pintura industrial e apoio técnico ao sector petrolífero onshore e offshore.',
+        'label' => 'Homepage - Pilar 1 - Descrição'
+    ],
+    'home_pilar2_icone' => [
+        'valor' => '🏥',
+        'label' => 'Homepage - Pilar 2 - Ícone'
+    ],
+    'home_pilar2_titulo' => [
+        'valor' => "Saúde &\nBem-Estar",
+        'label' => 'Homepage - Pilar 2 - Título'
+    ],
+    'home_pilar2_desc' => [
+        'valor' => 'Clínicas, fisioterapia, laboratórios e fornecimento de equipamentos médicos e hospitalares de alta qualidade.',
+        'label' => 'Homepage - Pilar 2 - Descrição'
+    ],
+    'home_pilar3_icone' => [
+        'valor' => '🌾',
+        'label' => 'Homepage - Pilar 3 - Ícone'
+    ],
+    'home_pilar3_titulo' => [
+        'valor' => 'Agronegócio',
+        'label' => 'Homepage - Pilar 3 - Título'
+    ],
+    'home_pilar3_desc' => [
+        'valor' => 'Produção, transformação e comercialização de produtos agrícolas — do campo ao mercado, contribuindo para a segurança alimentar.',
+        'label' => 'Homepage - Pilar 3 - Descrição'
+    ],
+    'home_pilar4_icone' => [
+        'valor' => '🏢',
+        'label' => 'Homepage - Pilar 4 - Ícone'
+    ],
+    'home_pilar4_titulo' => [
+        'valor' => "Comércio &\nInvestimentos",
+        'label' => 'Homepage - Pilar 4 - Título'
+    ],
+    'home_pilar4_desc' => [
+        'valor' => 'Comércio geral de bens e serviços e gestão de participações sociais em empresas parceiras do ecossistema Atlas.',
+        'label' => 'Homepage - Pilar 4 - Descrição'
     ]
 ];
 
@@ -117,7 +193,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'sobre_missao','sobre_visao','sobre_valores','sobre_texto',
         'gerente_1_nome','gerente_1_cargo','gerente_1_bio',
         'gerente_2_nome','gerente_2_cargo','gerente_2_bio',
-        'hero_subtitulo','manifesto_subtitulo','manifesto_titulo','manifesto_texto','video_homepage'
+        'hero_subtitulo','manifesto_subtitulo','manifesto_titulo','manifesto_texto','video_homepage',
+        'home_sobre_subtitulo','home_sobre_titulo','home_sobre_texto_1','home_sobre_texto_2',
+        'home_pilares_subtitulo','home_pilares_titulo','home_pilares_lead',
+        'home_pilar1_icone','home_pilar1_titulo','home_pilar1_desc',
+        'home_pilar2_icone','home_pilar2_titulo','home_pilar2_desc',
+        'home_pilar3_icone','home_pilar3_titulo','home_pilar3_desc',
+        'home_pilar4_icone','home_pilar4_titulo','home_pilar4_desc'
     ];
     $stmt = $pdo->prepare("UPDATE configuracoes SET valor = :valor WHERE chave = :chave");
     foreach ($campos as $campo) {
@@ -220,6 +302,7 @@ function cfgVal(array $c, string $key): string {
             <button type="button" class="tab-btn" onclick="changeTab('tab-manifesto')">🏡 Cultura & Manifesto</button>
             <button type="button" class="tab-btn" onclick="changeTab('tab-localizacao')">📍 Localização & Contactos</button>
             <button type="button" class="tab-btn" onclick="changeTab('tab-redes')">📱 Redes Sociais</button>
+            <button type="button" class="tab-btn" onclick="changeTab('tab-pilares')">🏛️ Os 4 Pilares</button>
         </div>
 
         <form method="POST" action="">
@@ -302,6 +385,32 @@ function cfgVal(array $c, string $key): string {
                         <div class="form-group">
                             <label>Valores</label>
                             <textarea name="sobre_valores" class="form-control" rows="3"><?= cfgVal($configs,'sobre_valores') ?></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top: 24px;">
+                    <div class="card-header"><h2>🏡 Secção "Quem Somos" da Homepage</h2></div>
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Subtítulo da Secção</label>
+                                <input type="text" name="home_sobre_subtitulo" class="form-control" value="<?= cfgVal($configs,'home_sobre_subtitulo') ?>">
+                                <p class="form-hint">Ex: Quem Somos</p>
+                            </div>
+                            <div class="form-group">
+                                <label>Título Principal</label>
+                                <textarea name="home_sobre_titulo" class="form-control" rows="2"><?= cfgVal($configs,'home_sobre_titulo') ?></textarea>
+                                <p class="form-hint">Ex: A Atlas\nCentro Sul (pode quebrar linha)</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Parágrafo 1 (Destaque)</label>
+                            <textarea name="home_sobre_texto_1" class="form-control" rows="3"><?= cfgVal($configs,'home_sobre_texto_1') ?></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Parágrafo 2 (Secundário / Cultura)</label>
+                            <textarea name="home_sobre_texto_2" class="form-control" rows="3"><?= cfgVal($configs,'home_sobre_texto_2') ?></textarea>
                         </div>
                     </div>
                 </div>
@@ -465,6 +574,111 @@ function cfgVal(array $c, string $key): string {
                                 <label>YouTube</label>
                                 <input type="url" name="youtube" class="form-control" placeholder="https://youtube.com/c/..." value="<?= cfgVal($configs,'youtube') ?>">
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ABA 7: OS 4 PILARES -->
+            <div id="tab-pilares" class="tab-content">
+                <div class="card">
+                    <div class="card-header"><h2>🏛️ Configurações da Secção dos Pilares (Homepage)</h2></div>
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Subtítulo da Secção</label>
+                                <input type="text" name="home_pilares_subtitulo" class="form-control" value="<?= cfgVal($configs,'home_pilares_subtitulo') ?>">
+                                <p class="form-hint">Ex: Ecossistema Atlas</p>
+                            </div>
+                            <div class="form-group">
+                                <label>Título Principal</label>
+                                <textarea name="home_pilares_titulo" class="form-control" rows="2"><?= cfgVal($configs,'home_pilares_titulo') ?></textarea>
+                                <p class="form-hint">Ex: Os 4 Pilares\nEstratégicos</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Texto de Introdução (Lead)</label>
+                            <textarea name="home_pilares_lead" class="form-control" rows="2"><?= cfgVal($configs,'home_pilares_lead') ?></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header"><h2>⚙️ Pilar 01 - Energia & Indústria</h2></div>
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="form-group" style="flex:0 0 120px;">
+                                <label>Ícone (Emoji)</label>
+                                <input type="text" name="home_pilar1_icone" class="form-control" value="<?= cfgVal($configs,'home_pilar1_icone') ?>">
+                            </div>
+                            <div class="form-group">
+                                <label>Título do Pilar</label>
+                                <input type="text" name="home_pilar1_titulo" class="form-control" value="<?= cfgVal($configs,'home_pilar1_titulo') ?>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Descrição Curta</label>
+                            <textarea name="home_pilar1_desc" class="form-control" rows="2"><?= cfgVal($configs,'home_pilar1_desc') ?></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header"><h2>🏥 Pilar 02 - Saúde & Bem-Estar</h2></div>
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="form-group" style="flex:0 0 120px;">
+                                <label>Ícone (Emoji)</label>
+                                <input type="text" name="home_pilar2_icone" class="form-control" value="<?= cfgVal($configs,'home_pilar2_icone') ?>">
+                            </div>
+                            <div class="form-group">
+                                <label>Título do Pilar</label>
+                                <input type="text" name="home_pilar2_titulo" class="form-control" value="<?= cfgVal($configs,'home_pilar2_titulo') ?>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Descrição Curta</label>
+                            <textarea name="home_pilar2_desc" class="form-control" rows="2"><?= cfgVal($configs,'home_pilar2_desc') ?></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header"><h2>🌾 Pilar 03 - Agronegócio</h2></div>
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="form-group" style="flex:0 0 120px;">
+                                <label>Ícone (Emoji)</label>
+                                <input type="text" name="home_pilar3_icone" class="form-control" value="<?= cfgVal($configs,'home_pilar3_icone') ?>">
+                            </div>
+                            <div class="form-group">
+                                <label>Título do Pilar</label>
+                                <input type="text" name="home_pilar3_titulo" class="form-control" value="<?= cfgVal($configs,'home_pilar3_titulo') ?>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Descrição Curta</label>
+                            <textarea name="home_pilar3_desc" class="form-control" rows="2"><?= cfgVal($configs,'home_pilar3_desc') ?></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header"><h2>🏢 Pilar 04 - Comércio & Investimentos</h2></div>
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="form-group" style="flex:0 0 120px;">
+                                <label>Ícone (Emoji)</label>
+                                <input type="text" name="home_pilar4_icone" class="form-control" value="<?= cfgVal($configs,'home_pilar4_icone') ?>">
+                            </div>
+                            <div class="form-group">
+                                <label>Título do Pilar</label>
+                                <input type="text" name="home_pilar4_titulo" class="form-control" value="<?= cfgVal($configs,'home_pilar4_titulo') ?>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Descrição Curta</label>
+                            <textarea name="home_pilar4_desc" class="form-control" rows="2"><?= cfgVal($configs,'home_pilar4_desc') ?></textarea>
                         </div>
                     </div>
                 </div>
