@@ -671,6 +671,21 @@ p  { color: var(--gray-700); line-height: 1.8; }
 .news-link { font-size: 12px; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 1px; transition: letter-spacing var(--transition); }
 .news-card:hover .news-link { letter-spacing: 2px; }
 
+.post-destaque-img {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    display: block;
+}
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 24px auto;
+    border-radius: var(--radius);
+}
+
 /* =========================================================
    GALERIA
    ========================================================= */
@@ -1014,6 +1029,11 @@ textarea.form-control { resize: vertical; min-height: 140px; }
     :root { --nav-h: 72px; }
     .container { padding: 0 20px; }
     .section { padding: 50px 0; }
+
+    .post-destaque-img {
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
 
     /* Ajustar logo ao tamanho do navbar mobile */
     .nav-logo img { height: 48px; }

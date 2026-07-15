@@ -54,8 +54,7 @@ $metaDesc  = $post['resumo'] ? $post['resumo'] : truncar(strip_tags($post['corpo
 <?php if ($post['imagem_destaque']): ?>
 <div style="background:var(--navy-dark);padding-bottom:0;">
     <div class="container" style="max-width:860px;">
-        <img src="<?= htmlspecialchars($post['imagem_destaque']) ?>" alt="<?= htmlspecialchars($post['titulo']) ?>"
-             style="width:100%;height:460px;object-fit:cover;border-radius:var(--radius-lg) var(--radius-lg) 0 0;display:block;">
+        <img src="<?= htmlspecialchars($post['imagem_destaque']) ?>" alt="<?= htmlspecialchars($post['titulo']) ?>" class="post-destaque-img">
     </div>
 </div>
 <?php endif; ?>
@@ -91,13 +90,15 @@ $metaDesc  = $post['resumo'] ? $post['resumo'] : truncar(strip_tags($post['corpo
         <div class="news-grid" style="grid-template-columns:repeat(<?= min(count($relacionados),3) ?>,1fr);">
             <?php foreach ($relacionados as $r): ?>
             <article class="news-card">
-                <?php if ($r['imagem_destaque']): ?>
-                <img src="<?= htmlspecialchars($r['imagem_destaque']) ?>" alt="" class="news-img">
-                <?php else: ?>
-                <div class="news-img" style="background:var(--navy);color:rgba(255,255,255,.2);font-size:48px;">
-                    <?= iconeCategoria($r['categoria']) ?>
+                <div class="news-img-wrapper">
+                    <?php if ($r['imagem_destaque']): ?>
+                    <img src="<?= htmlspecialchars($r['imagem_destaque']) ?>" alt="<?= htmlspecialchars($r['titulo']) ?>">
+                    <?php else: ?>
+                    <div class="news-img-placeholder" style="background:var(--navy);color:rgba(255,255,255,.2);font-size:48px;display:flex;align-items:center;justify-content:center;">
+                        <?= iconeCategoria($r['categoria']) ?>
+                    </div>
+                    <?php endif; ?>
                 </div>
-                <?php endif; ?>
                 <div class="news-body">
                     <h3 class="news-title" style="font-size:15px;"><?= htmlspecialchars($r['titulo']) ?></h3>
                     <div class="news-footer">
