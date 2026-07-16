@@ -30,31 +30,26 @@ $metaDesc  = $post['resumo'] ? $post['resumo'] : truncar(strip_tags($post['corpo
     </div>
 </div>
 
-<!-- Post Hero -->
-<section style="background:var(--navy-dark);padding:80px 0 60px;">
-    <div class="container" style="max-width:860px;">
-        <span class="news-category" style="background:rgba(200,169,81,.2);color:var(--gold);margin-bottom:20px;display:inline-block;padding:4px 12px;border-radius:var(--radius);">
-            <?= iconeCategoria($post['categoria']) ?> <?= labelCategoria($post['categoria']) ?>
+<!-- Post Layout style Boa Vida -->
+<section style="background:var(--white); padding: 80px 0 40px;">
+    <div class="container" style="max-width:760px; text-align: center;">
+        <span class="news-category" style="color:var(--gold); font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; display: inline-block;">
+            <?= labelCategoria($post['categoria']) ?>
         </span>
-        <h1 style="color:#fff;font-weight:900;line-height:1.2;margin-bottom:20px;font-size:clamp(2rem,4vw,3.2rem);">
+        <h1 style="color:var(--navy); font-weight: 600; line-height: 1.3; margin-bottom: 24px; font-size: clamp(1.8rem, 4vw, 2.6rem);">
             <?= htmlspecialchars($post['titulo']) ?>
         </h1>
-        <?php if ($post['resumo']): ?>
-        <p style="color:rgba(255,255,255,.75);font-size:18px;line-height:1.7;margin-bottom:20px;"><?= htmlspecialchars($post['resumo']) ?></p>
-        <?php endif; ?>
-        <p style="color:rgba(255,255,255,.4);font-size:13px;font-weight:600;">
-            📅 <?= formatarData($post['criado_em']) ?>
-            <?php if ($post['atualizado_em'] && $post['atualizado_em'] !== $post['criado_em']): ?>
-            &nbsp;·&nbsp; Atualizado em <?= formatarData($post['atualizado_em']) ?>
-            <?php endif; ?>
+        <div style="width: 40px; height: 2px; background: var(--gold); margin: 0 auto 24px; border-radius: 2px;"></div>
+        <p style="color:var(--gray-500); font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">
+            <?= formatarData($post['criado_em']) ?>
         </p>
     </div>
 </section>
 
 <?php if ($post['imagem_destaque']): ?>
-<div style="background:var(--navy-dark);padding-bottom:0;">
-    <div class="container" style="max-width:860px;">
-        <img src="<?= htmlspecialchars($post['imagem_destaque']) ?>" alt="<?= htmlspecialchars($post['titulo']) ?>" class="post-destaque-img">
+<div style="background:var(--white); padding-bottom: 20px;">
+    <div class="container" style="max-width:900px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
+        <img src="<?= htmlspecialchars($post['imagem_destaque']) ?>" alt="<?= htmlspecialchars($post['titulo']) ?>" style="width: 100%; height: auto; max-height: 520px; object-fit: cover; display: block;">
     </div>
 </div>
 <?php endif; ?>
@@ -84,10 +79,10 @@ $metaDesc  = $post['resumo'] ? $post['resumo'] : truncar(strip_tags($post['corpo
 
 <!-- Relacionados -->
 <?php if (!empty($relacionados)): ?>
-<section class="section section-light" style="padding-top:0;">
-    <div class="container" style="max-width:1000px;">
-        <h2 style="font-size:24px;font-weight:900;color:var(--navy);margin-bottom:28px;">Artigos Relacionados</h2>
-        <div class="news-grid" style="grid-template-columns:repeat(<?= min(count($relacionados),3) ?>,1fr);">
+<section class="section" style="padding-top: 60px; background: var(--white); border-top: 1px solid var(--gray-100);">
+    <div class="container" style="max-width:900px;">
+        <h2 style="font-size:22px; font-weight: 600; color:var(--navy); margin-bottom:28px; text-align: center;">Artigos Relacionados</h2>
+        <div class="news-grid">
             <?php foreach ($relacionados as $r): ?>
             <article class="news-card">
                 <div class="news-img-wrapper">
