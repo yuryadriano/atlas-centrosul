@@ -200,28 +200,28 @@ if (empty($slogan1) && empty($slogan2)) {
         <div class="pilares-grid">
             <a href="/atlas/servicos/energia-industria.php" class="pilar-card">
                 <span class="pilar-num">Pilar 01</span>
-                <span class="pilar-icon"><?= htmlspecialchars(config('home_pilar1_icone', '⚙️')) ?></span>
+                <div class="pilar-icon-wrap"><?= htmlspecialchars(config('home_pilar1_icone', '⚙️')) ?></div>
                 <h3 class="pilar-title"><?= nl2br(htmlspecialchars(config('home_pilar1_titulo', "Energia &\nIndústria"))) ?></h3>
                 <p class="pilar-desc"><?= htmlspecialchars(config('home_pilar1_desc', 'Manutenção eletromecânica, soldadura, pintura industrial e apoio técnico ao sector petrolífero onshore e offshore.')) ?></p>
                 <span class="pilar-link">Saber mais →</span>
             </a>
             <a href="/atlas/servicos/saude-bem-estar.php" class="pilar-card">
                 <span class="pilar-num">Pilar 02</span>
-                <span class="pilar-icon"><?= htmlspecialchars(config('home_pilar2_icone', '🏥')) ?></span>
+                <div class="pilar-icon-wrap"><?= htmlspecialchars(config('home_pilar2_icone', '🏥')) ?></div>
                 <h3 class="pilar-title"><?= nl2br(htmlspecialchars(config('home_pilar2_titulo', "Saúde &\nBem-Estar"))) ?></h3>
                 <p class="pilar-desc"><?= htmlspecialchars(config('home_pilar2_desc', 'Clínicas, fisioterapia, laboratórios e fornecimento de equipamentos médicos e hospitalares de alta qualidade.')) ?></p>
                 <span class="pilar-link">Saber mais →</span>
             </a>
             <a href="/atlas/servicos/agronegocio.php" class="pilar-card">
                 <span class="pilar-num">Pilar 03</span>
-                <span class="pilar-icon"><?= htmlspecialchars(config('home_pilar3_icone', '🌾')) ?></span>
+                <div class="pilar-icon-wrap"><?= htmlspecialchars(config('home_pilar3_icone', '🌾')) ?></div>
                 <h3 class="pilar-title"><?= nl2br(htmlspecialchars(config('home_pilar3_titulo', "Agronegócio"))) ?></h3>
                 <p class="pilar-desc"><?= htmlspecialchars(config('home_pilar3_desc', 'Produção, transformação e comercialização de produtos agrícolas — do campo ao mercado, contribuindo para a segurança alimentar.')) ?></p>
                 <span class="pilar-link">Saber mais →</span>
             </a>
             <a href="/atlas/servicos/comercio-investimentos.php" class="pilar-card">
                 <span class="pilar-num">Pilar 04</span>
-                <span class="pilar-icon"><?= htmlspecialchars(config('home_pilar4_icone', '🏢')) ?></span>
+                <div class="pilar-icon-wrap"><?= htmlspecialchars(config('home_pilar4_icone', '🏢')) ?></div>
                 <h3 class="pilar-title"><?= nl2br(htmlspecialchars(config('home_pilar4_titulo', "Comércio &\nInvestimentos"))) ?></h3>
                 <p class="pilar-desc"><?= htmlspecialchars(config('home_pilar4_desc', 'Comércio geral de bens e serviços e gestão de participações sociais em empresas parceiras do ecossistema Atlas.')) ?></p>
                 <span class="pilar-link">Saber mais →</span>
